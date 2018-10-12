@@ -1,0 +1,3 @@
+project=litecable_from_broadcast
+test=minitest
+template=erb

@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require './chat'
+require 'rack'
+require 'anycable'
+
+# Turn AnyCable compatibility mode
+LiteCable.anycable!
+
+Anycable.connection_factory = Chat::Connection
+
+Anycable::Server.start
